@@ -5,10 +5,13 @@
   <title>Home - Main</title>
   
   <meta name="author" content="Nauro Hitashi">
-  
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   <link rel="icon" href="/Assets/favicon.gif" type="image/gif">
-  <link rel="stylesheet" type="text/css" href="/Assets/main.css">
-
+  <!--<link rel="stylesheet" type="text/css" href="/Assets/main.css">-->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=atoji"></script>
+  <link rel="stylesheet" href="http://www.myinstants.com/media/css/instants.css"/>
 </head>
 
 <body>
@@ -20,6 +23,22 @@
   
   <p3><a href="/Test_Multiplayer/Test_Multiplayer_Android.apk" target="_blank">Download Android Multiplayer Test</a></p3>
   
+  <div style="width: 190px; margin: 0 auto 25px auto;">
+    <div class="circle large-button-background" style="background-color:#cc00ff;"></div>
+    <div class="large-button" onclick="play('/Assets/Sounds/epic.swf.mp3')"></div>
+    <div class="large-button-shadow"></div>
+  </div>
+  <script type="text/javascript">
+        $(document).keyup(function(e) {
+          if (e.keyCode == 27) { $("#player")[0].pause(); }   // esc
+        });
+        
+        function play(url) {
+            $("#mp3_source").attr("src", url);
+            $("#player")[0].load();
+            $("#player")[0].play();
+        }
+    </script>
 </body>
 
 </html>
