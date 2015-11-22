@@ -93,7 +93,7 @@ video {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 50em;
+    height: 55em;
     margin-bottom: 3em
 }
 /*#logo,
@@ -104,17 +104,8 @@ video {
     background-image: -ms-linear-gradient(rgba(200, 200, 200, .16) 1px, transparent 1px), -ms-linear-gradient(0deg, rgba(200, 200, 200, .16) 1px, transparent 1px), -ms-linear-gradient(rgba(200, 200, 200, .12) 1px, transparent 1px), -ms-linear-gradient(0deg, rgba(200, 200, 200, .12) 1px, transparent 1px), -ms-linear-gradient(rgba(200, 200, 200, .1) 1px, transparent 1px), -ms-linear-gradient(0deg, rgba(200, 200, 200, .1) 1px, transparent 1px);
     background-size: 4em 4em, 4em 4em, 1em 1em, 1em 1em, .5em .5em, .5em .5em
 }*/
-.example-shapes-green {
-    color: #6C9
-}
-.example-shapes-orange {
-    color: #F93
-}
-.example-shapes-red {
-    color: #F66
-}
 #logo {
-    margin: -13em 0 0 -100em
+    margin: -30em 0 0 -100em
 }
 #tridiv {
     perspective: 800px;
