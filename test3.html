@@ -14,4 +14,17 @@
 <source id="mp3_source" src="http://www.myinstants.com/media/sounds/epic.swf.mp3" type="audio/mpeg">
 </audio>
 
-</body></html>
+<script type="text/javascript">
+        $(document).keyup(function(e) {
+          if (e.keyCode == 27) { $("#player")[0].pause(); }   // esc
+        });
+        
+        function play(url) {
+            $("#mp3_source").attr("src", url);
+            $("#player")[0].load();
+            $("#player")[0].play();
+        }
+</script>
+
+</body>
+</html>
