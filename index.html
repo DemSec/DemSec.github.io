@@ -10,8 +10,28 @@
   <!--<link rel="stylesheet" type="text/css" href="/Assets/main.css">-->
   <style>
     html, head, iframe, div, a, input {
-        cursor: url(http://cur.cursors-4u.net/cursors/cur-11/cur1054.cur), pointer;}
-        
+      cursor: url(http://cur.cursors-4u.net/cursors/cur-11/cur1054.cur), pointer;
+    }
+    .ButtonLink {
+      padding: 15px 25px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+    .ButtonLink:hover {
+      background-color: #3e8e41
+    }
+    .ButtonLink:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
 html,
 body,
 div,
@@ -1583,15 +1603,15 @@ h1 {
   <div style="width:100%;border:15px groove #73AD21;padding:10px;">
   <p>Look at my awesome website</p>
   
-  <p1><a href="/Tanks">Play Tanks!</a></p1>
+  <p1><a class="ButtonLink" href="/Tanks">Play Tanks!</a></p1>
   
-  <p1><a href="/Unity">Unity WebGL Test</a></p1>
+  <p1><a class="ButtonLink" href="/Unity">Unity WebGL Test</a></p1>
   
-  <p2><a href="https://quizlet.com/_1qn9uu">CNC Programming Terms Flash Cards</a></p2>
+  <p2><a class="ButtonLink" href="https://quizlet.com/_1qn9uu">CNC Programming Terms Flash Cards</a></p2>
   
-  <p3><a href="https://www.dropbox.com/s/yzjmns135g6lu6g/Augmented%20Reality%20Test.apk?dl=0" target="_blank">Download Android Augmented Reality Test</a></p3>
+  <p3><a class="ButtonLink" href="https://www.dropbox.com/s/yzjmns135g6lu6g/Augmented%20Reality%20Test.apk?dl=0" target="_blank">Download Android Augmented Reality Test</a></p3>
   
-  <p1><a href="https://github.com/Quantum-Helix/Quantum-Helix.github.io">GitHub Repository</a></p1>
+  <p1><a class="ButtonLink" href="https://github.com/Quantum-Helix/Quantum-Helix.github.io">GitHub Repository</a></p1>
   
   </div>
   
