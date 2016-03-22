@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Web Experiments</title>
+  <style>
+  body {
+	margin: 0;
+  }
+  /* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ #tridiv {
+  perspective: 800px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 100%;
+}
+.scene, .shape, .face, .face-wrapper, .cr {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.scene {
+  width: 80em;
+  height: 80em;
+  top: 50%;
+  left: 50%;
+  margin: -40em 0 0 -40em;
+}
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+}
+.face, .face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+.face {
+  background-size: 100% 100%!important;
+  background-position: center;
+}
+.face-wrapper .face {
+  left: 100%;
+  width: 100%;
+  height: 100%
+}
+.photon-shader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+.side {
+  left: 50%;
+}
+.cr, .cr .side {
+  height: 100%;
+}
+[class*="prism"] .ft, [class*="prism"] .bk {
+  width: 100%;
+  height: 100%;
+}
+[class*="prism"] .bk {
+  left: 100%;
+}
+[class*="prism"] .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+}
+[class*="prism"] .lt {
+  transform: rotateY(90deg) translateX(-50%);
+}
+[class*="prism"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="prism"] .lt {
+  left: 100%;
+}
+[class*="prism"] .bm {
+  top: 100%;
+}
+[class*="prism"] .rt .face {
+  left: -100%;
+  transform-origin: 100% 0;
+}
+/* .pri-1 styles */
+.pri-1 {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:4em;
+  height:5em;
+  margin:-2.5em 0 0 -2em;
+}
+.pri-1 .rt .face {
+  transform:rotateZ(-30.963756532073536deg);
+}
+.pri-1 .lt .face {
+  transform:rotateZ(30.963756532073536deg);
+}
+.pri-1 .ft {
+  height:5.830951894845301em;
+  transform:translateZ(-1.5em) rotateX(30.963756532073536deg);
+}
+.pri-1 .bk {
+  transform:translateZ(-1.5em) rotateY(180deg);
+}
+.pri-1 .rt, .pri-1 .lt {
+  width:3em;
+  height:5em;
+}
+.pri-1 .rt .face, .pri-1 .lt .face {
+  height:5.830951894845301em;
+}
+.pri-1 .bm {
+  width:4em;
+  height:3em;
+}
+.pri-1 .face {
+  background-color:#777;
+}
+  </style>
+</head>
+
+<body>
+<div id="tridiv">
+  <div class="scene" style="-webkit-transform:rotateX(-42deg) rotateY(-44deg); -moz-transform:rotateX(-42deg) rotateY(-44deg); -ms-transform:rotateX(-42deg) rotateY(-44deg); transform:rotateX(-42deg) rotateY(-44deg); ">
+    <div class="shape prism-1 pri-1">
+      <div class="face-wrapper lt">
+        <div class="face"></div>
+      </div>
+	</div>
+  </div>
+</div>
+</body>
+
+</html>
