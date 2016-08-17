@@ -12,4 +12,22 @@
   </head>
   <body>
     <h>Main Robot Page</h>
+    
+    <button class="ButtonLink" onclick="play('http://www.myinstants.com/media/sounds/epic.swf.mp3')" >Click Here!</button>
+    
+    <audio id="player" preload="auto">
+      <source id="mp3_source" src="http://www.myinstants.com/media/sounds/epic.swf.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script type="text/javascript">
+      $(document).keyup(function(e) {
+        if (e.keyCode == 27) { $("#player")[0].pause(); }   // Esc to pause
+      });
+      
+      function play(url) {
+          $("#mp3_source").attr("src", url);
+          $("#player")[0].load();
+          $("#player")[0].play();
+      }
+  </script>
   </body>
